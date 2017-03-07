@@ -3,15 +3,34 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "cfg": {
+    "port": 6000,
+    "type": "sqlite",
+    "database": "./blojj.sqlite",
+    "models": [
+      {
+        "name": "post",
+        "defaults": {
+          "id": 0,
+          "date": 0,
+          "title": "",
+          "content": "",
+          "author": "",
+          "tags": ""
+        }
+      }
+    ]
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "node main"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "kaop": "^2.6.0",
-    "korm": "^0.1.0",
+    "korm": "^0.2.3",
     "marky-markdown": "^9.0.2"
   }
 }
